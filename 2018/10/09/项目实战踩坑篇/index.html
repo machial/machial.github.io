@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件123456789101112131415161718192021222324252627282930313233343536var formData = new FormData">
+<meta name="description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件 123456789101112131415161718192021222324252627282930313233343536var formData = new FormDat">
 <meta name="keywords" content="项目,实战,js,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="项目实战踩坑篇">
 <meta property="og:url" content="http://machial.github.io/2018/10/09/项目实战踩坑篇/index.html">
 <meta property="og:site_name" content="博客 | 前端">
-<meta property="og:description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件123456789101112131415161718192021222324252627282930313233343536var formData = new FormData">
+<meta property="og:description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件 123456789101112131415161718192021222324252627282930313233343536var formData = new FormDat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-09T05:17:03.991Z">
+<meta property="og:updated_time" content="2018-10-16T08:04:29.901Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目实战踩坑篇">
-<meta name="twitter:description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件123456789101112131415161718192021222324252627282930313233343536var formData = new FormData">
+<meta name="twitter:description" content="时间与时间戳转换  Date.parse(时间)  jQuery动态渲染的元素无法绑定事件  解决:1$(父元素).on(&amp;apos;事件&amp;apos;,子元素,function()&amp;#123;&amp;#125;)  上传文件 123456789101112131415161718192021222324252627282930313233343536var formData = new FormDat">
 
 
 
@@ -387,8 +387,14 @@
 </ul>
 <p>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(父元素).on(&apos;事件&apos;,子元素,function()&#123;&#125;)</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>上传文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var formData = new FormData()</span><br><span class="line">formData.append(字段,文件对象)</span><br><span class="line"></span><br><span class="line">//之后发起ajax请求 </span><br><span class="line">//注意：</span><br><span class="line"></span><br><span class="line">cache: false,  </span><br><span class="line">contentType: false,  </span><br><span class="line">processData: false,</span><br><span class="line"></span><br><span class="line">//这三项需要设置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//附上一个完整的代码</span><br><span class="line">$(&quot;.picDiv&quot;).on(&apos;change&apos;,&apos;.file1&apos;,function () &#123;</span><br><span class="line">    var formData = new FormData()</span><br><span class="line">    formData.append(&apos;file&apos;,public1)</span><br><span class="line">    var token = localStorage.getItem(&apos;token&apos;)</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">      url:`XXX`,</span><br><span class="line">      type: &apos;POST&apos;,</span><br><span class="line">      data:formData,</span><br><span class="line">      headers:&#123;</span><br><span class="line">        &quot;Accept&quot;: &quot;*/*&quot;,</span><br><span class="line">        &quot;Authorization&quot;:token,</span><br><span class="line">      &#125;,</span><br><span class="line">      cache: false,  </span><br><span class="line">      contentType: false,  </span><br><span class="line">      processData: false,</span><br><span class="line">      success: function(data)&#123;</span><br><span class="line">        </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  //public1是图片的files</span><br></pre></td></tr></table></figure></li>
+<li><p>上传文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var formData = new FormData()</span><br><span class="line">formData.append(字段,文件对象)</span><br><span class="line"></span><br><span class="line">//之后发起ajax请求 </span><br><span class="line">//注意：</span><br><span class="line"></span><br><span class="line">cache: false,  </span><br><span class="line">contentType: false,  </span><br><span class="line">processData: false,</span><br><span class="line"></span><br><span class="line">//这三项需要设置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//附上一个完整的代码</span><br><span class="line">$(&quot;.picDiv&quot;).on(&apos;change&apos;,&apos;.file1&apos;,function () &#123;</span><br><span class="line">    var formData = new FormData()</span><br><span class="line">    formData.append(&apos;file&apos;,public1)</span><br><span class="line">    var token = localStorage.getItem(&apos;token&apos;)</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">      url:`XXX`,</span><br><span class="line">      type: &apos;POST&apos;,</span><br><span class="line">      data:formData,</span><br><span class="line">      headers:&#123;</span><br><span class="line">        &quot;Accept&quot;: &quot;*/*&quot;,</span><br><span class="line">        &quot;Authorization&quot;:token,</span><br><span class="line">      &#125;,</span><br><span class="line">      cache: false,  </span><br><span class="line">      contentType: false,  </span><br><span class="line">      processData: false,</span><br><span class="line">      success: function(data)&#123;</span><br><span class="line">        </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  //public1是图片的files</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>记录一个判断某个对象是否含有X属性<br>1, in运算符</p>
+<p> 如果指定的属性在指定的对象或其原型链中，则in运算符返回true</p>
+</li>
 </ul>
+<p>2, hasOwnProperty()<br>   该方法只有对象自身存在该属性时，才会返回true  </p>
 
       
     </div>
@@ -505,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
