@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="小程序,项目," />
+  <meta name="keywords" content="css,html," />
 
 
 
@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="window中 设置中设置快捷键 可以使用第三方开发工具(只能编写代码) 小程序文件类型1,样式文件(.wxss) 2,骨架(.wxml)等同(.html) 3,业务(.js) 4,配置(.json)  小程序基本结构1,全局文件  app.json  app.wxss  app.js 2,页面构成  .wxml  .wxss  .js  .json(不是必须的)  组件式开发(很重要)1,在对">
-<meta name="keywords" content="小程序,项目">
+<meta name="description" content="css实现平滑滚动12scroll-behavior:smoothhtml, body &amp;#123; scroll-behavior:smooth; &amp;#125; js scrollIntoView实现平滑滚动123目标元素.scrollIntoView(&amp;#123;    behavior: &amp;quot;smooth&amp;quot;&amp;#125;); 拖动文件上传效果12345678910111213">
+<meta name="keywords" content="css,html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小程序入门">
-<meta property="og:url" content="http://machial.github.io/2018/10/09/小程序入门/index.html">
+<meta property="og:title" content="平滑滚动">
+<meta property="og:url" content="http://machial.github.io/2018/10/24/原生平滑滚动/index.html">
 <meta property="og:site_name" content="博客 | 前端">
-<meta property="og:description" content="window中 设置中设置快捷键 可以使用第三方开发工具(只能编写代码) 小程序文件类型1,样式文件(.wxss) 2,骨架(.wxml)等同(.html) 3,业务(.js) 4,配置(.json)  小程序基本结构1,全局文件  app.json  app.wxss  app.js 2,页面构成  .wxml  .wxss  .js  .json(不是必须的)  组件式开发(很重要)1,在对">
+<meta property="og:description" content="css实现平滑滚动12scroll-behavior:smoothhtml, body &amp;#123; scroll-behavior:smooth; &amp;#125; js scrollIntoView实现平滑滚动123目标元素.scrollIntoView(&amp;#123;    behavior: &amp;quot;smooth&amp;quot;&amp;#125;); 拖动文件上传效果12345678910111213">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T01:23:16.045Z">
+<meta property="og:updated_time" content="2018-10-24T09:21:51.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小程序入门">
-<meta name="twitter:description" content="window中 设置中设置快捷键 可以使用第三方开发工具(只能编写代码) 小程序文件类型1,样式文件(.wxss) 2,骨架(.wxml)等同(.html) 3,业务(.js) 4,配置(.json)  小程序基本结构1,全局文件  app.json  app.wxss  app.js 2,页面构成  .wxml  .wxss  .js  .json(不是必须的)  组件式开发(很重要)1,在对">
+<meta name="twitter:title" content="平滑滚动">
+<meta name="twitter:description" content="css实现平滑滚动12scroll-behavior:smoothhtml, body &amp;#123; scroll-behavior:smooth; &amp;#125; js scrollIntoView实现平滑滚动123目标元素.scrollIntoView(&amp;#123;    behavior: &amp;quot;smooth&amp;quot;&amp;#125;); 拖动文件上传效果12345678910111213">
 
 
 
@@ -146,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://machial.github.io/2018/10/09/小程序入门/"/>
+  <link rel="canonical" href="http://machial.github.io/2018/10/24/原生平滑滚动/"/>
 
 
 
 
 
-  <title>小程序入门 | 博客 | 前端</title>
+  <title>平滑滚动 | 博客 | 前端</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://machial.github.io/2018/10/09/小程序入门/">
+    <link itemprop="mainEntityOfPage" href="http://machial.github.io/2018/10/24/原生平滑滚动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zh_fellow">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">小程序入门</h1>
+          <h1 class="post-title" itemprop="name headline">平滑滚动</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T14:34:29+08:00">
-                2018-10-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-24T16:27:01+08:00">
+                2018-10-24
               </time>
             
 
@@ -341,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小程序/" itemprop="url" rel="index">
-                    <span itemprop="name">小程序</span>
+                  <a href="/categories/平滑滚动/" itemprop="url" rel="index">
+                    <span itemprop="name">平滑滚动</span>
                   </a>
                 </span>
 
@@ -378,21 +378,12 @@
       
 
       
-        <ul>
-<li>window中 设置中设置快捷键</li>
-<li>可以使用第三方开发工具(只能编写代码)</li>
-<li><p>小程序文件类型<br>1,样式文件(.wxss)</p>
-<p>2,骨架(.wxml)等同(.html)</p>
-<p>3,业务(.js)</p>
-<p>4,配置(.json)</p>
-</li>
-<li><p>小程序基本结构<br>1,全局文件<br>  app.json<br>  app.wxss<br>  app.js</p>
-<p>2,页面构成<br>  .wxml<br>  .wxss<br>  .js<br>  .json(不是必须的)</p>
-</li>
-<li>组件式开发(很重要)<br>1,在对应的页面.json文件中引用<br>2,直接在.wxml中使用.json文件中自定义的组件名</li>
-<li><p>flex布局<br>1,注意点</p>
-<p>主轴方向改变通过 justify-content<br>交叉轴方向改变通过 align-item<br>元素超出宽度换行 flex-wrap</p>
-</li>
+        <h4 id="css实现平滑滚动"><a href="#css实现平滑滚动" class="headerlink" title="css实现平滑滚动"></a>css实现平滑滚动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scroll-behavior:smooth</span><br><span class="line">html, body &#123; scroll-behavior:smooth; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="js-scrollIntoView实现平滑滚动"><a href="#js-scrollIntoView实现平滑滚动" class="headerlink" title="js scrollIntoView实现平滑滚动"></a>js scrollIntoView实现平滑滚动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">目标元素.scrollIntoView(&#123;</span><br><span class="line">    behavior: &quot;smooth&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="拖动文件上传效果"><a href="#拖动文件上传效果" class="headerlink" title="拖动文件上传效果"></a>拖动文件上传效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CSS代码：</span><br><span class="line">.box &#123; width: 256px; height: 171px; border: 1px solid #ccc; background-color: #f5f5f5; &#125;</span><br><span class="line"></span><br><span class="line">HTML代码：</span><br><span class="line">&lt;h4&gt;拖拽文件到下面框框：&lt;/h4&gt;</span><br><span class="line">&lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">JS代码：</span><br><span class="line">box.addEventListener(&apos;dragover&apos;, function (event) &#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">&#125;);</span><br><span class="line">box.addEventListener(&apos;drop&apos;, function (event) &#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">    // 遍历文件信息</span><br><span class="line">    var files = event.dataTransfer.files || [];</span><br><span class="line">    var length = files.length;</span><br><span class="line">    if (length == 0) &#123;</span><br><span class="line">        this.innerHTML = &apos;&lt;p&gt;没有文件&lt;/p&gt;&apos;;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    var html = &apos;&apos;;</span><br><span class="line">    for (var index = 0; index &lt; length; index++) &#123;</span><br><span class="line">        html += &apos;&lt;p&gt;类型：&apos;+ files[index].type +&apos;&lt;/p&gt;&apos;;    </span><br><span class="line">    &#125;</span><br><span class="line">    this.innerHTML = html;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="如何获取剪切板中的图片？"><a href="#如何获取剪切板中的图片？" class="headerlink" title="如何获取剪切板中的图片？"></a>如何获取剪切板中的图片？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&apos;paste&apos;, function (event) &#123;</span><br><span class="line">    var items = event.clipboardData &amp;&amp; event.clipboardData.items;</span><br><span class="line">    var file = null;</span><br><span class="line">    if (items &amp;&amp; items.length) &#123;</span><br><span class="line">        // 检索剪切板items</span><br><span class="line">        for (var i = 0; i &lt; items.length; i++) &#123;</span><br><span class="line">            if (items[i].type.indexOf(&apos;image&apos;) !== -1) &#123;</span><br><span class="line">                file = items[i].getAsFile();</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 此时file就是剪切板中的图片文件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果需要预览<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 如果需要预览，可以执行下面代码</span><br><span class="line">   var reader = new FileReader()</span><br><span class="line">   reader.onload = function(event) &#123;</span><br><span class="line">       preview.innerHTML = &apos;&lt;img src=&quot;&apos; + event.target.result + &apos;&quot; class=&quot;upload-image&quot;&gt;&apos;;</span><br><span class="line">   &#125;</span><br><span class="line">   reader.readAsDataURL(file);</span><br><span class="line">   // 如果不需要预览，上面这段可以忽略</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -411,9 +402,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/小程序/" rel="tag"># 小程序</a>
+            <a href="/tags/css/" rel="tag"># css</a>
           
-            <a href="/tags/项目/" rel="tag"># 项目</a>
+            <a href="/tags/html/" rel="tag"># html</a>
           
         </div>
       
@@ -426,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/09/项目实战踩坑篇/" rel="next" title="项目实战踩坑篇">
-                <i class="fa fa-chevron-left"></i> 项目实战踩坑篇
+              <a href="/2018/10/16/es6学习二/" rel="next" title="es6学习二">
+                <i class="fa fa-chevron-left"></i> es6学习二
               </a>
             
           </div>
@@ -435,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/09/小程序项目实战/" rel="prev" title="小程序项目实战">
-                小程序项目实战 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -555,6 +551,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#css实现平滑滚动"><span class="nav-number">1.</span> <span class="nav-text">css实现平滑滚动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js-scrollIntoView实现平滑滚动"><span class="nav-number">2.</span> <span class="nav-text">js scrollIntoView实现平滑滚动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拖动文件上传效果"><span class="nav-number"></span> <span class="nav-text">拖动文件上传效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何获取剪切板中的图片？"><span class="nav-number"></span> <span class="nav-text">如何获取剪切板中的图片？</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

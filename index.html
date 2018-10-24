@@ -286,6 +286,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://machial.github.io/2018/10/24/原生平滑滚动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zh_fellow">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博客 | 前端">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/24/原生平滑滚动/" itemprop="url">平滑滚动</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-24T16:27:01+08:00">
+                2018-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/平滑滚动/" itemprop="url" rel="index">
+                    <span itemprop="name">平滑滚动</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="css实现平滑滚动"><a href="#css实现平滑滚动" class="headerlink" title="css实现平滑滚动"></a>css实现平滑滚动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scroll-behavior:smooth</span><br><span class="line">html, body &#123; scroll-behavior:smooth; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="js-scrollIntoView实现平滑滚动"><a href="#js-scrollIntoView实现平滑滚动" class="headerlink" title="js scrollIntoView实现平滑滚动"></a>js scrollIntoView实现平滑滚动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">目标元素.scrollIntoView(&#123;</span><br><span class="line">    behavior: &quot;smooth&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="拖动文件上传效果"><a href="#拖动文件上传效果" class="headerlink" title="拖动文件上传效果"></a>拖动文件上传效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CSS代码：</span><br><span class="line">.box &#123; width: 256px; height: 171px; border: 1px solid #ccc; background-color: #f5f5f5; &#125;</span><br><span class="line"></span><br><span class="line">HTML代码：</span><br><span class="line">&lt;h4&gt;拖拽文件到下面框框：&lt;/h4&gt;</span><br><span class="line">&lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">JS代码：</span><br><span class="line">box.addEventListener(&apos;dragover&apos;, function (event) &#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">&#125;);</span><br><span class="line">box.addEventListener(&apos;drop&apos;, function (event) &#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">    // 遍历文件信息</span><br><span class="line">    var files = event.dataTransfer.files || [];</span><br><span class="line">    var length = files.length;</span><br><span class="line">    if (length == 0) &#123;</span><br><span class="line">        this.innerHTML = &apos;&lt;p&gt;没有文件&lt;/p&gt;&apos;;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    var html = &apos;&apos;;</span><br><span class="line">    for (var index = 0; index &lt; length; index++) &#123;</span><br><span class="line">        html += &apos;&lt;p&gt;类型：&apos;+ files[index].type +&apos;&lt;/p&gt;&apos;;    </span><br><span class="line">    &#125;</span><br><span class="line">    this.innerHTML = html;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="如何获取剪切板中的图片？"><a href="#如何获取剪切板中的图片？" class="headerlink" title="如何获取剪切板中的图片？"></a>如何获取剪切板中的图片？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&apos;paste&apos;, function (event) &#123;</span><br><span class="line">    var items = event.clipboardData &amp;&amp; event.clipboardData.items;</span><br><span class="line">    var file = null;</span><br><span class="line">    if (items &amp;&amp; items.length) &#123;</span><br><span class="line">        // 检索剪切板items</span><br><span class="line">        for (var i = 0; i &lt; items.length; i++) &#123;</span><br><span class="line">            if (items[i].type.indexOf(&apos;image&apos;) !== -1) &#123;</span><br><span class="line">                file = items[i].getAsFile();</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 此时file就是剪切板中的图片文件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果需要预览<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 如果需要预览，可以执行下面代码</span><br><span class="line">   var reader = new FileReader()</span><br><span class="line">   reader.onload = function(event) &#123;</span><br><span class="line">       preview.innerHTML = &apos;&lt;img src=&quot;&apos; + event.target.result + &apos;&quot; class=&quot;upload-image&quot;&gt;&apos;;</span><br><span class="line">   &#125;</span><br><span class="line">   reader.readAsDataURL(file);</span><br><span class="line">   // 如果不需要预览，上面这段可以忽略</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://machial.github.io/2018/10/16/es6学习二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1305,7 +1453,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1316,7 +1464,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1327,7 +1475,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
