@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="记录数组简单去重方法其一12345678const arr = [1,2,3,4,2,1,3,5,6,3]const arr2 = []const s = new Set()arr.forEach(x =&amp;gt; s.add(x));for(i of s)&amp;#123;  arr2.push(i)&amp;#125;console.log(arr2)">
+<meta name="description" content="记录数组简单去重方法其一12345678910111213//  const arr = [1,2,3,4,2,1,3,5,6,3]  const arr2 = []  const s = new Set()  arr.forEach(x =&amp;gt; s.add(x));  for(i of s)&amp;#123;    arr2.push(i)  &amp;#125;  console.log(arr2)//">
 <meta name="keywords" content="前端,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记">
 <meta property="og:url" content="http://machial.github.io/2018/10/30/笔记/index.html">
 <meta property="og:site_name" content="博客 | 前端">
-<meta property="og:description" content="记录数组简单去重方法其一12345678const arr = [1,2,3,4,2,1,3,5,6,3]const arr2 = []const s = new Set()arr.forEach(x =&amp;gt; s.add(x));for(i of s)&amp;#123;  arr2.push(i)&amp;#125;console.log(arr2)">
+<meta property="og:description" content="记录数组简单去重方法其一12345678910111213//  const arr = [1,2,3,4,2,1,3,5,6,3]  const arr2 = []  const s = new Set()  arr.forEach(x =&amp;gt; s.add(x));  for(i of s)&amp;#123;    arr2.push(i)  &amp;#125;  console.log(arr2)//">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T06:23:47.644Z">
+<meta property="og:updated_time" content="2018-10-30T06:27:25.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
-<meta name="twitter:description" content="记录数组简单去重方法其一12345678const arr = [1,2,3,4,2,1,3,5,6,3]const arr2 = []const s = new Set()arr.forEach(x =&amp;gt; s.add(x));for(i of s)&amp;#123;  arr2.push(i)&amp;#125;console.log(arr2)">
+<meta name="twitter:description" content="记录数组简单去重方法其一12345678910111213//  const arr = [1,2,3,4,2,1,3,5,6,3]  const arr2 = []  const s = new Set()  arr.forEach(x =&amp;gt; s.add(x));  for(i of s)&amp;#123;    arr2.push(i)  &amp;#125;  console.log(arr2)//">
 
 
 
@@ -378,7 +378,7 @@
       
 
       
-        <h4 id="记录数组简单去重方法其一"><a href="#记录数组简单去重方法其一" class="headerlink" title="记录数组简单去重方法其一"></a>记录数组简单去重方法其一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,4,2,1,3,5,6,3]</span><br><span class="line">const arr2 = []</span><br><span class="line">const s = new Set()</span><br><span class="line">arr.forEach(x =&gt; s.add(x));</span><br><span class="line">for(i of s)&#123;</span><br><span class="line">  arr2.push(i)</span><br><span class="line">&#125;</span><br><span class="line">console.log(arr2)</span><br></pre></td></tr></table></figure>
+        <h4 id="记录数组简单去重方法其一"><a href="#记录数组简单去重方法其一" class="headerlink" title="记录数组简单去重方法其一"></a>记录数组简单去重方法其一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">  const arr = [1,2,3,4,2,1,3,5,6,3]</span><br><span class="line">  const arr2 = []</span><br><span class="line">  const s = new Set()</span><br><span class="line">  arr.forEach(x =&gt; s.add(x));</span><br><span class="line">  for(i of s)&#123;</span><br><span class="line">    arr2.push(i)</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(arr2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//简单粗暴</span><br><span class="line">[...new Set(array)]</span><br></pre></td></tr></table></figure>
 
       
     </div>
